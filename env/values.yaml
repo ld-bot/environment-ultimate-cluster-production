@@ -15,9 +15,11 @@ expose:
   config:
     domain: ultimate-cluster.donley.cloud
     exposer: Ingress
-    http: "true"
-    tlsacme: "false"
+    http: "false"
+    tlsSecretName: tls-ultimate-cluster.donley.cloud-p
+    tlsacme: "true"
     urltemplate: '{{.Service}}-{{.Namespace}}.{{.Domain}}'
+  production: true
 jenkins:
   Servers:
     Global: {}
